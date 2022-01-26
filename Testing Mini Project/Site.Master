@@ -1,0 +1,231 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Testing_Mini_Project.SiteMaster" %>
+
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Styles/ReportSite.css" rel="stylesheet" />
+    <link href="/Styles/ReportStyle.css" rel="stylesheet" />
+    <link href="/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="/Content/jquery.dataTables.css" rel="stylesheet" />
+    <%-- %><link href="/Content/bootstrap-select.css" rel="stylesheet" />--%>
+    <link href="/Content/bootstrap-imageupload.css" rel="stylesheet" />
+    <link href="/Content/font-awesome.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-1.8.3.min.js"></script>
+    <script src="/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/moment.js"></script>
+    <script src="/Scripts/bootstrap-datetimepicker.min.js"></script>
+
+
+
+    <style type="text/css">
+    .thumbnail > img:hover > a,
+    .thumbnail > img:hover > a:hover,
+    .thumbnail > img:hover > a:focus {
+    background-color: rgb(231, 231, 231);
+    color: rgb(85, 85, 85);
+    }
+
+
+
+    .thumbnail > img:hover > .dropdown-menu {
+    display: block;
+    }
+
+
+
+    body {
+    font-family: Montserrat, sans-serif;
+    /*margin:-18px auto 0px auto;*/
+    /*margin: 0px auto 0px auto;
+    overflow-x: hidden;*/
+    }
+
+
+
+    .navbar-inverse {
+    height:auto;
+    background-color: #F5F5F5;
+    border-color: #F5F5F5;
+    }
+
+
+
+    .thumbnail {
+    margin: 10px;
+    }
+
+
+
+
+    a.navbar-brand {
+    background: url(/Images/nozomi-logistics-logo.png) no-repeat top left;
+    background-size:contain;
+    display:block;
+    width: 250px; /*250**/
+    height: 50px; /*50*/
+    text-indent: -9999px; /* hides the link text */
+    }
+
+
+
+    .navbar-nav {
+    margin-left:50px;
+    }
+
+
+
+    .navbar-inverse .navbar-nav > li > a {
+    color: #9A9A9A;
+    }
+
+
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+    color: #C18149;
+    }
+
+
+
+    .navbar-inverse .navbar-nav > li > ul > li > a {
+    color: #9A9A9A;
+    }
+
+
+
+    .navbar-inverse .navbar-nav > li > ul > li > a:hover {
+    color: #C18149;
+    background-color: transparent;
+    }
+
+
+
+    ul.nav.navbar-nav .dropdown.open .dropdown-toggle {
+    background-color: #bfd730;
+    color: #9A9A9A;
+    }
+
+
+
+    .dropdown:hover > .dropdown-menu {
+    display: block;
+    color: #C18149;
+    }
+    .form-horizontal{
+    height: auto;
+    width: auto;
+    border-width:1.34px;
+    border-style:outset;
+    border-color: #1585cf;
+    padding-top : 20px;
+    padding-left : 50px;
+    border-color: black;
+
+    }
+
+
+
+    .img-responsive {
+    height: auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 250px;
+    }
+
+
+
+    .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    min-height: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    }
+
+
+
+    </style>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+    <body>
+    <form id = "form1" runat="server">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </button>
+    <a href="/HomePage.aspx" class="navbar-brand">Application name</a>
+    </div>
+    <div class="navbar-collapse collapse" >
+    <ul class="nav navbar-nav">
+   <%-- <li class="dropdown">
+    <a>Setup<span class="caret"></span></a>
+    <ul class="dropdown-menu">
+    <li><a href="/Form/User/UserMgmt.aspx">User</a></li>
+    <li><a href="/Form/User/RoleMgmt.aspx">Role</a></li>
+    </ul>
+    </li>--%>
+   <%-- <li class="dropdown">
+    <a>Master<span class="caret"></span></a>
+    <ul class="dropdown-menu">
+    <li><a href="/Form/Master/Company.aspx">Company</a></li>
+    <li><a href="/Form/Master/Location.aspx">Location</a></li>
+    <li><a href="/Form/Master/Part.aspx">Part</a></li>
+    </ul>
+    </li>--%>
+    <%--<li class="dropdown">
+    <a>Transaction<span class="caret"></span></a>
+    <ul class="dropdown-menu">
+    <li><a href="/Form/Transaction/Invoice.aspx">Invoice</a></li>
+    <li><a href="/Form/Transaction/PurchaseOrder.aspx">Purchase Order</a></li>
+    <li><a href="/Form/Transaction/DeliveryOrder.aspx">Delivery Order</a></li>
+    <li><a href="/Form/Transaction/NGScanResultLog.aspx">NG Scan Result Log</a></li>
+    <li><a href="/Form/Transaction/StockLocation.aspx">Stock Location</a></li>
+    </ul>
+    </li>--%>
+    <%--<li class="dropdown">
+    <a>Visualization<span class="caret"></span></a>
+    <ul class="dropdown-menu">
+    <li><a href="/Form/Transaction/Visualization.aspx">Visualization</a></li>
+    </ul>
+    </li>--%>
+    <%--<li class="dropdown">
+    <a>LabelPrinting<span class="caret"></span></a>
+    <ul class="dropdown-menu">
+    <li><a href="/Form/LabelPrinting/LabelPrinting.aspx">Label Printing</a></li>
+    </ul>
+    </li>--%>
+    <li class="dropdown">
+    <a>Report<span class="caret"></span></a>
+    <ul class="dropdown-menu">
+    <li><a href="/SystemSetup.aspx">System Setup</a></li>
+    <%-- <li><a href="/Form/Report/MonthEndListing.aspx">Month End</a></li>
+    <li><a href="/Form/Report/StockOnHandListing.aspx">Stock On Hand</a></li>
+    <li><a href="/Form/Report/ItemHistoryListing.aspx">Item History</a></li>--%>
+    <li><a href="Devices.aspx">Devices</a></li>
+    </ul>
+    </li>
+    </ul>
+   <%-- <asp:Button runat="server" id="btn_logout" Cssclass="btn-sm btn-primary pull-right" style="margin-left:300px;margin-top:5px;" Text="LogOut" OnClick="Btn_LoggedOut"/>--%>
+    </div>
+    </div>
+    </div>
+    <div class="main">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+    </div>
+    <br/>
+    <br/>
+    <div class ="container">
+    </div>
+    </form>
+    </body>
+</html>
